@@ -8,6 +8,10 @@
 //   reverseInt(-15) === -51
 //   reverseInt(-90) === -9
 
-function reverseInt(n) {}
+function reverseInt(n) {
+  // two solutions:
+  // solution nr 1, turn the number into a string, and reverse it, parse back to number.
+  // solution nr 2,
+}
 
 module.exports = reverseInt;
