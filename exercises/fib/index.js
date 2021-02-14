@@ -18,16 +18,26 @@
 //   }
 //   return sequence[sequence.length - 1];
 // }
+// runtime is O(n), so linear runtime -  as the amount of work is incremented linearly foreach element from 0 until n
 
-function fib(n, sequence = [0, 1]) {
-  if (sequence.length > n) {
-    return sequence[sequence.length - 1];
+// my own version of recursion fib - runtime O(n)
+// function fib(n, sequence = [0, 1]) {
+//   if (sequence.length > n) {
+//     return sequence[sequence.length - 1];
+//   }
+//   const first = sequence[sequence.length - 2];
+//   const second = sequence[sequence.length - 1];
+//   sequence.push(first + second);
+
+//   return fib(n, sequence);
+// }
+
+// grider's recursion fib
+function fib(n) {
+  if (n < 2) {
+    return n;
   }
-  const first = sequence[sequence.length - 2];
-  const second = sequence[sequence.length - 1];
-  sequence.push(first + second);
 
-  return fib(n, sequence);
+  return fib(n - 1) + fib(n - 2);
 }
-
 module.exports = fib;
