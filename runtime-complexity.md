@@ -43,3 +43,12 @@
 - reference to how much RAM an algorithm needs.
 - usually very similar to runtime complexity:
   - e.g. for a linear runtime on a given set of data, the amount of memory was linear too, becasue for every 1 additional character, we need 1 additiional element in the string to be added.
+
+### Memoization
+
+Problem with fib exponential time solution: for every additional element we get a dramatic increase in calculation necessary - runtime complexity is exponential time because the tree of calls is parsed again for each additional number.
+
+What needs to happen is that whenever you call e.g. fib(5), the list of fib() calls should be exactly once for every n <= 5.
+The way to do this is memoization.
+
+**Memoization** means recording the arguments of each functioncall such as if its called again its taking the precomputed result instead of running the function again.

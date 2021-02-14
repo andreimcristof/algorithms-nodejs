@@ -33,6 +33,35 @@
 // }
 
 // grider's recursion fib
+// function fib(n) {
+//   if (n < 2) {
+//     return n;
+//   }
+
+//   return fib(n - 1) + fib(n - 2);
+// }
+/* for every additional element we get a dramatic increase in calculation necessary - runtime complexity is exponential time
+because the tree of calls is parsed again for each additional number.
+
+What needs to happen is that whenever you call e.g. fib(5), the list of  fib() calls should be exactly once for every n <= 5.
+The way to do this is memoization:
+
+memoization means recording the arguments of each functioncall such as if its called again its taking the precomputed result instead of 
+running the function again:
+*/
+
+function memoize(fn) {
+  const cache = {};
+  // ""...args" when the count of args is unknown
+  return function (...args) {
+    if (cache[args]) return cache[args];
+
+    const result = fn.apply(this, args);
+    cache[args] = result;
+    return result;
+  };
+}
+
 function fib(n) {
   if (n < 2) {
     return n;
@@ -40,4 +69,6 @@ function fib(n) {
 
   return fib(n - 1) + fib(n - 2);
 }
+fib = memoize(fib);
+
 module.exports = fib;
