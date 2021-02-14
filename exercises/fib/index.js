@@ -8,6 +8,26 @@
 // Example:
 //   fib(4) === 3
 
-function fib(n) {}
+// function fib(n) {
+//   let sequence = [0, 1];
+
+//   while (sequence.length <= n) {
+//     let first = sequence[sequence.length - 2];
+//     let second = sequence[sequence.length - 1];
+//     sequence.push(first + second);
+//   }
+//   return sequence[sequence.length - 1];
+// }
+
+function fib(n, sequence = [0, 1]) {
+  if (sequence.length > n) {
+    return sequence[sequence.length - 1];
+  }
+  const first = sequence[sequence.length - 2];
+  const second = sequence[sequence.length - 1];
+  sequence.push(first + second);
+
+  return fib(n, sequence);
+}
 
 module.exports = fib;
