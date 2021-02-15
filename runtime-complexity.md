@@ -1,4 +1,4 @@
-# Runtime complexity
+# Preparing for a FAANG interview - Runtime complexity
 
 - direct 1 to 1 relationship between nr of input to algorithm and nr of operations = "linear" runtime.
 
@@ -14,7 +14,7 @@
 
 - **Quasilinear time n\*log(n)** - if doubling the number of elements doesnt double the amount of work. sorting operations are n\*log(n)
 
-- **Quadratic time n^2** - every element in a collection needs to be compared to every other element. Each new element has to deal with all already existing elements in the collection (the handshake problem)
+- **Quadratic time n^2** - Each new element has to deal with all already existing elements in the collection (the handshake problem)
 
 - **Exponential time 2^n** - a single element added to a collection doubles the amount of processing power required.
 
@@ -48,7 +48,26 @@
 
 Problem with fib exponential time solution: for every additional element we get a dramatic increase in calculation necessary - runtime complexity is exponential time because the tree of calls is parsed again for each additional number.
 
-What needs to happen is that whenever you call e.g. fib(5), the list of fib() calls should be exactly once for every n <= 5.
-The way to do this is memoization.
+What needs to happen is that whenever you call e.g. fib(5), the list of fib() calls should be exactly once for every n <= 5. The way to do this is memoization.
 
-**Memoization** means recording the arguments of each functioncall such as if its called again its taking the precomputed result instead of running the function again.
+**Memoization** means recording the arguments of each function call such as if it's called again it's taking the precomputed result instead of running the function again.
+
+## Data Structures
+
+- they are all about runtime complexity
+
+- a DS is some way of organizing information of data in a program with some optimal "runtime complexity" for adding or removing records
+
+- when asked at an interview to solve a given problem, think in terms of "what DS can i use that is optimal for the problem we are trying to solve".
+
+- knowledge about suboptimal DS is also desired.
+
+### Queues
+
+- adding to queue - enqueue-ing
+- removing from queue - dequeue-ing
+- queues are always FIFO.
+- in JS there is no queue. You can emulate a queue in JS with the methods:
+  - adding to front of array - `unshift()`
+  - removing from the end of array - `pop()`
+- making a queue in JS means making a class that operates an array and exposing only add / remove methods and hiding other array methods such as splice. This is when you want to make a queue but dont want to treat it like an array.
