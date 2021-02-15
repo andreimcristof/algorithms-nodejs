@@ -71,3 +71,11 @@ What needs to happen is that whenever you call e.g. fib(5), the list of fib() ca
   - adding to front of array - `unshift()`
   - removing from the end of array - `pop()`
 - making a queue in JS means making a class that operates an array and exposing only add / remove methods and hiding other array methods such as splice. This is when you want to make a queue but dont want to treat it like an array.
+
+### Stacks
+
+- FILO - first in, last out
+- stack methods:
+  - push - add a record to stack
+  - pop - remove top record in the stack
+  - peek (optional) - return the top record without removing it
