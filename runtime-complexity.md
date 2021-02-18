@@ -79,3 +79,34 @@ What needs to happen is that whenever you call e.g. fib(5), the list of fib() ca
   - push - add a record to stack
   - pop - remove top record in the stack
   - peek (optional) - return the top record without removing it
+
+### Linked Lists
+
+- ordered collection of data
+- the collection contains nodes
+- each node has some amount of data, and a reference to the next node
+- also called "chain of nodes strung together"
+- the order of nodes is always maintained
+- in every linked list there are always 2 special nodes:
+  - head node - first node
+  - tail node - last node
+    - tail node has no reference to another node
+- any type of data can be contained in a node
+- what is a reference to another node in JS?
+  - e.g. linkedlist
+
+```
+const nodeOne = {
+  data: 1234
+}
+
+const nodeTwo = {
+  data: 1234
+}
+
+nodeOne.next = nodeTwo;
+```
+
+- By convention, props are:
+  - `data`
+  - ref is called `next`
