@@ -14,6 +14,22 @@ class LinkedList {
     this.head = null;
   }
 
+  forEach(predicate) {
+    for (let i = 0; i < this.size(); i++) {
+      let element = this.getAt(i);
+      predicate(element, i);
+    }
+  }
+
+  *[Symbol.iterator]() {
+    let node = this.head;
+
+    while (node) {
+      yield node;
+      node = node.next;
+    }
+  }
+
   insertFirst(data) {
     this.head = new Node(data, this.head);
   }
