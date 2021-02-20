@@ -19,7 +19,7 @@ function circular(list) {
   let fast = list.head.next;
 
   while (fast && fast.next) {
-    if (slow === fast) return true;
+    if (slow === fast) return true; // the triple equal actually ensures comparison of whether  it's the same instance in memory.
 
     slow = slow.next;
     fast = fast.next.next;
