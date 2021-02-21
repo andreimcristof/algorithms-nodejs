@@ -110,3 +110,10 @@ nodeOne.next = nodeTwo;
 - By convention, props are:
   - `data`
   - ref is called `next`
+
+### Trees
+
+- tree traversal (iteration) - common interview theme
+- done in 2 ways (2 orders)
+  - breadth-first traversal - iterate each level of the tree from left to right (even if they have different parent nodes)
+  - depth-first traversal - start at top, go down left side as far as possible, then go back a level and then go down again on next node, etc.
