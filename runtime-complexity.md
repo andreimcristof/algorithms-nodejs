@@ -116,4 +116,10 @@ nodeOne.next = nodeTwo;
 - tree traversal (iteration) - common interview theme
 - done in 2 ways (2 orders)
   - breadth-first traversal - iterate each level of the tree from left to right (even if they have different parent nodes)
+    - start with array with just root inside it; while array still has nodes, foreach node: remove node, run predicate function on node, insert children of node in array. see implementation
   - depth-first traversal - start at top, go down left side as far as possible, then go back a level and then go down again on next node, etc.
+
+#### Breadth-first in-depth
+
+- **given the root node of a tree, return an array where each element is the width of the tree at each level**
+  - the requirement of _width_ always implies breadth-first since it traverses on levels of nodes.
