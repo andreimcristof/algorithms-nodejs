@@ -131,3 +131,11 @@ nodeOne.next = nodeTwo;
 - the term "search" in BST enforces requirements on the data contained in the nodes, that it respects these conditions. If we remove the term "search" and we have Binary Trees, these can contain data that does not fit in the strict requirements for each parent nodes.
 - in an interview setting you should ask if its a BST (restricted data on child nodes) or a BT (no data restriction, anything goes).
 - another common question in an interview setting is "validate" that this is a well formed BST (e..g in this particular case every node has 2 children, and left child nodes all are less than parent, and right child nodes are always greater than parent)
+
+## Sorting
+
+- BubbleSort - n^2 quadratic complexity - easiest
+- SelectionSort - n^2 quadratic complexity - easier
+- MergeSort - n\*log(n) - medium
+
+- so BubbleSort and SelectionSort are v slow for large collections, but good at small collections (e.g. < 100 elements)
